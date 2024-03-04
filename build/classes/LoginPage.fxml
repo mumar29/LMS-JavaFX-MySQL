@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="503.0" prefWidth="689.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginPageController">
+   <children>
+      <ImageView fitHeight="510.0" fitWidth="695.0" pickOnBounds="true">
+         <image>
+            <Image url="@libraryBooks.jpg" />
+         </image>
+      </ImageView>
+      <TabPane prefHeight="503.0" prefWidth="695.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab style="-fx-background-color: #6ed490;" text="Admin Login">
+            <content>
+              <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="323.0" prefWidth="531.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="303.0" layoutX="87.0" layoutY="82.0" opacity="0.61" stroke="BLACK" strokeType="INSIDE" width="505.0" />
+                        <Label alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="115.0" layoutY="96.0" prefHeight="71.0" prefWidth="466.0" text="LIBRARY MANAGEMENT SYSTEM" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" underline="true" wrapText="true">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="48.0" layoutY="175.0" prefHeight="29.0" prefWidth="600.0" text="Admin " textFill="#6fd78a" wrapText="true">
+                           <font>
+                              <Font name="Bookshelf Symbol 7" size="21.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="admin_username" layoutX="244.0" layoutY="221.0" opacity="0.88" prefHeight="31.0" prefWidth="249.0" />
+                        <Label layoutX="130.0" layoutY="266.0" prefHeight="44.0" prefWidth="112.0" text="Password:" textFill="#f8f8f8">
+                           <font>
+                              <Font name="Bookman Old Style Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="130.0" layoutY="217.0" prefHeight="39.0" prefWidth="109.0" text="Username:" textFill="WHITE">
+                           <font>
+                              <Font name="Bookman Old Style Bold Italic" size="19.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="391.0" layoutY="325.0" mnemonicParsing="false" onAction="#adminLogin" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: #6ed490;" text="Login" textFill="WHITE">
+                           <font>
+                              <Font name="Bookshelf Symbol 7" size="17.0" />
+                           </font>
+                        </Button>
+                        <PasswordField fx:id="admin_password" layoutX="244.0" layoutY="275.0" prefHeight="30.0" prefWidth="250.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab style="-fx-background-color: #6ed490;" text="User Login">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="303.0" layoutX="100.0" layoutY="87.0" opacity="0.58" stroke="BLACK" strokeType="INSIDE" width="479.0" />
+                        <Text fill="WHITE" layoutX="99.0" layoutY="129.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="LIBRARY MANAGEMENT SYSTEM" textAlignment="CENTER" underline="true" wrappingWidth="497.33337020874023">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="29.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="user_username" layoutX="246.0" layoutY="236.0" onAction="#userLogin" opacity="0.9" prefHeight="31.0" prefWidth="236.0" />
+                        <Label layoutX="125.0" layoutY="238.0" prefHeight="27.0" prefWidth="121.0" text="Username:" textFill="WHITE">
+                           <font>
+                              <Font name="Bookman Old Style Bold Italic" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="125.0" layoutY="285.0" prefHeight="35.0" prefWidth="121.0" text="Password:" textFill="#fffbfb">
+                           <font>
+                              <Font name="Bookman Old Style Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="388.0" layoutY="336.0" mnemonicParsing="false" onAction="#userLogin" prefHeight="38.0" prefWidth="94.0" style="-fx-background-color: #6ed490;" text="Login" textFill="#fffdfd">
+                           <font>
+                              <Font name="Bookshelf Symbol 7" size="15.0" />
+                           </font>
+                        </Button>
+                        <Label alignment="CENTER" layoutX="48.0" layoutY="183.0" prefHeight="29.0" prefWidth="600.0" text="User Login" textFill="#6fd78a" wrapText="true">
+                           <font>
+                              <Font name="Bookshelf Symbol 7" size="21.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="user_password" layoutX="247.0" layoutY="286.0" prefHeight="33.0" prefWidth="235.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab style="-fx-background-color: #6ed490;" text="Sign Up">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="600.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="351.0" layoutX="113.0" layoutY="55.0" opacity="0.6" stroke="BLACK" strokeType="INSIDE" width="435.0" />
+                        <TextField fx:id="f_name" layoutX="146.0" layoutY="156.0" opacity="0.9" prefHeight="37.0" prefWidth="170.0" promptText="First Name" AnchorPane.leftAnchor="146.0" AnchorPane.rightAnchor="379.0" />
+                        <Text fill="WHITE" layoutX="111.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register" textAlignment="CENTER" underline="true" wrappingWidth="438.33340191841125">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="31.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="u_name" layoutX="146.0" layoutY="218.0" opacity="0.9" prefHeight="37.0" prefWidth="171.0" promptText="Username" AnchorPane.leftAnchor="146.0" />
+                        <TextField fx:id="p_word" layoutX="353.0" layoutY="219.0" opacity="0.9" prefHeight="36.0" prefWidth="167.0" promptText="Password" AnchorPane.rightAnchor="175.0" />
+                        <TextField fx:id="e_mail" layoutX="146.0" layoutY="285.0" opacity="0.9" prefHeight="35.0" prefWidth="172.0" promptText="Email" />
+                        <TextField fx:id="p_no" layoutX="354.0" layoutY="285.0" opacity="0.9" prefHeight="35.0" prefWidth="168.0" promptText="Phone no" />
+                        <TextField fx:id="l_name" layoutX="351.0" layoutY="156.0" opacity="0.9" prefHeight="37.0" prefWidth="173.0" promptText="Last Name" AnchorPane.rightAnchor="171.0" />
+                        <Button layoutX="275.0" layoutY="341.0" mnemonicParsing="false" onAction="#addUser" prefHeight="38.0" prefWidth="111.0" style="-fx-background-color: #6ed490;" text="Add Member" textFill="WHITE">
+                           <font>
+                              <Font name="Bookshelf Symbol 7" size="15.0" />
+                           </font>
+                        </Button>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

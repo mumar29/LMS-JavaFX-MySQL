@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="528.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="User_searchBooksController">
+   <children>
+      <ImageView fitHeight="538.0" fitWidth="721.0" pickOnBounds="true">
+         <image>
+            <Image url="@bkg_10_october.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Books" textAlignment="CENTER" wrappingWidth="702.0">
+         <font>
+            <Font name="Constantia" size="38.0" />
+         </font>
+      </Text>
+      <TextField fx:id="search_book" layoutX="93.0" layoutY="104.0" prefHeight="36.0" prefWidth="426.0" promptText="Search by book name">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <Button layoutX="529.0" layoutY="104.0" mnemonicParsing="false" onAction="#searchBook" prefHeight="36.0" prefWidth="124.0" style="-fx-background-color: #62FD7B" text="Search  Book">
+         <font>
+            <Font name="Constantia Bold" size="16.0" />
+         </font></Button>
+      <TableView fx:id="searchBook_table" layoutX="36.0" layoutY="156.0" prefHeight="241.0" prefWidth="621.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+        <columns>
+          <TableColumn fx:id="name" prefWidth="168.66665649414062" text="Book Name" />
+          <TableColumn fx:id="author" prefWidth="163.33331298828125" text="Author" />
+            <TableColumn fx:id="category" prefWidth="156.0" text="Category" />
+            <TableColumn fx:id="issue_status" prefWidth="153.33331298828125" text="Issue Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="557.0" layoutY="410.0" mnemonicParsing="false" onAction="#requestBook" prefHeight="36.0" prefWidth="124.0" style="-fx-background-color: #62FD7B" text="Request Book">
+         <font>
+            <Font name="Constantia Bold" size="15.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

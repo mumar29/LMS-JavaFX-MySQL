@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="528.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin_booksController">
+   <children>
+      <TabPane prefHeight="528.0" prefWidth="702.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Add/Remove Books">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.3370535714285715" prefHeight="501.0" prefWidth="702.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="501.0" fitWidth="571.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@bkg_03_march.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <TextField fx:id="book_name" layoutX="24.0" layoutY="119.0" prefHeight="32.0" prefWidth="173.0" promptText="Name" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="16.0" />
+                                    <TextField fx:id="author" layoutX="24.0" layoutY="164.0" prefHeight="32.0" prefWidth="173.0" promptText="Author" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="16.0" />
+                                    <Text layoutX="-2.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add New Book" textAlignment="CENTER" wrappingWidth="235.27740383148193">
+                                       <font>
+                                          <Font name="Constantia Bold" size="27.0" />
+                                       </font>
+                                    </Text>
+                                    <DatePicker fx:id="date_entered" layoutX="26.0" layoutY="255.0" prefHeight="33.0" prefWidth="187.0" promptText="Date Entered" />
+                                    <Button layoutX="127.0" layoutY="310.0" mnemonicParsing="false" onAction="#addBook" prefHeight="37.0" prefWidth="86.0" text="Add">
+                                       <font>
+                                          <Font name="Constantia Bold" size="18.0" />
+                                       </font></Button>
+                                    <ComboBox fx:id="category" layoutX="26.0" layoutY="211.0" prefHeight="30.0" prefWidth="187.0" promptText="Category" style="-fx-background-color: white;" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: white;">
+                                 <children>
+                                    <ImageView fitHeight="500.0" fitWidth="556.0" layoutX="-92.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@bkg_03_march.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <TextField fx:id="remove_book_search" layoutX="41.0" layoutY="117.0" prefHeight="33.0" prefWidth="278.0" promptText="Search by book name" />
+                                    <Text layoutX="-3.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remove Book" textAlignment="CENTER" wrappingWidth="465.2773132324219">
+                                       <font>
+                                          <Font name="Constantia Bold" size="27.0" />
+                                       </font>
+                                    </Text>
+                                    <TableView fx:id="remove_book" layoutX="15.0" layoutY="168.0" prefHeight="175.0" prefWidth="434.0">
+                                      <columns>
+                                        <TableColumn fx:id="Name" prefWidth="70.66668701171875" text="Name" />
+                                        <TableColumn fx:id="Author" prefWidth="54.66668701171875" text="Author" />
+                                          <TableColumn fx:id="IssueStatus" prefWidth="82.0" text="Issue Status" />
+                                          <TableColumn fx:id="Category" prefWidth="68.66668701171875" text="Category" />
+                                          <TableColumn fx:id="IssuedBy" prefWidth="68.66668701171875" text="Issued By" />
+                                          <TableColumn fx:id="DateEntered" prefWidth="89.33331298828125" text="Date entered" />
+                                      </columns>
+                                    </TableView>
+                                    <Button layoutX="360.0" layoutY="357.0" mnemonicParsing="false" onAction="#removeBook" prefHeight="36.0" prefWidth="88.0" text="Remove">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font></Button>
+                                    <Button layoutX="321.0" layoutY="115.0" mnemonicParsing="false" onAction="#remove_search" prefHeight="29.0" prefWidth="83.0" text="Search">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font></Button>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Update Info">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="502.0" fitWidth="702.0" opacity="0.75" pickOnBounds="true">
+                           <image>
+                              <Image url="@bkg_03_march.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Books" textAlignment="CENTER" wrappingWidth="701.9999999999999">
+                           <font>
+                              <Font name="Constantia Bold" size="28.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="update_search" layoutX="151.0" layoutY="98.0" prefHeight="27.0" prefWidth="345.0" />
+                        <Text layoutX="25.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search By Name:" wrappingWidth="125.37969970703125">
+                           <font>
+                              <Font name="System Italic" size="15.0" />
+                           </font>
+                        </Text>
+                        <TableView fx:id="update_book" layoutX="33.0" layoutY="144.0" prefHeight="233.0" prefWidth="636.0" AnchorPane.bottomAnchor="122.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="144.0">
+                          <columns>
+                            <TableColumn fx:id="u_name" prefWidth="116.66668701171875" text="Name" />
+                            <TableColumn fx:id="u_author" prefWidth="135.99996948242188" text="Author" />
+                              <TableColumn fx:id="u_issue_status" prefWidth="132.0" text="Issue Status" />
+                              <TableColumn fx:id="u_issued_by" prefWidth="131.3333740234375" text="Issued By" />
+                              <TableColumn fx:id="u_category" prefWidth="118.0" text="Category" />
+                          </columns>
+                        </TableView>
+                        <HBox layoutX="36.0" layoutY="417.0" prefHeight="56.0" prefWidth="629.0">
+                           <children>
+                              <TextField fx:id="upd_name" prefHeight="30.0" prefWidth="109.0" promptText="name" />
+                              <TextField fx:id="upd_author" prefHeight="30.0" prefWidth="103.0" promptText="author" />
+                              <TextField fx:id="upd_issue_status" prefHeight="30.0" prefWidth="105.0" promptText="issue status" />
+                              <TextField fx:id="upd_issued_by" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="105.0" promptText="issued by" />
+                              <ComboBox fx:id="upd_category" prefHeight="29.0" prefWidth="105.0" promptText="Category" style="-fx-background-color: white;" />
+                              <Button mnemonicParsing="false" onAction="#updateBook" prefHeight="30.0" prefWidth="111.0" text="Update">
+                                 <font>
+                                    <Font name="Constantia Bold" size="16.0" />
+                                 </font></Button>
+                           </children>
+                        </HBox>
+                        <Text layoutX="36.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Info:" wrappingWidth="125.37969970703125">
+                           <font>
+                              <Font name="System Italic" size="15.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="565.0" layoutY="97.0" mnemonicParsing="false" onAction="#updateSearch" prefHeight="30.0" prefWidth="100.0" text="Search">
+                           <font>
+                              <Font name="Constantia Bold" size="17.0" />
+                           </font></Button>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

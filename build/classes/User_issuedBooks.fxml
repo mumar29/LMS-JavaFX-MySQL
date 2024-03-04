@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="528.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="User_issuedBooksController">
+   <children>
+      <ImageView fitHeight="528.0" fitWidth="743.0" pickOnBounds="true">
+         <image>
+            <Image url="@bkg_10_october.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Books" textAlignment="CENTER" wrappingWidth="702.0">
+         <font>
+            <Font name="Constantia" size="38.0" />
+         </font>
+      </Text>
+      <Button layoutX="558.0" layoutY="96.0" mnemonicParsing="false" onAction="#searchMyBooks" prefHeight="36.0" prefWidth="137.0" style="-fx-background-color: #62FD7B;" text="Display Books">
+         <font>
+            <Font name="Constantia Bold" size="17.0" />
+         </font></Button>
+      <TableView fx:id="my_books" layoutX="47.0" layoutY="142.0" prefHeight="271.0" prefWidth="608.0" AnchorPane.leftAnchor="47.0" AnchorPane.rightAnchor="47.0">
+        <columns>
+            <TableColumn fx:id="issue_ID" prefWidth="109.99999618530273" text="Issue ID" />
+          <TableColumn fx:id="name" prefWidth="184.6667022705078" text="Name" />
+          <TableColumn fx:id="author" prefWidth="152.66668701171875" text="Author" />
+            <TableColumn fx:id="issue_date" prefWidth="159.99996948242188" text="Issue Date" />
+        </columns>
+      </TableView>
+      <Button layoutX="558.0" layoutY="429.0" mnemonicParsing="false" onAction="#returnBook" prefHeight="36.0" prefWidth="137.0" style="-fx-background-color: #62FD7B;" text="Return Book">
+         <font>
+            <Font name="Constantia Bold" size="17.0" />
+         </font></Button>
+      <DatePicker fx:id="date_returned" layoutX="351.0" layoutY="431.0" prefHeight="32.0" prefWidth="197.0" promptText="Select Return Date" />
+   </children>
+</AnchorPane>
